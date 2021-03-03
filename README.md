@@ -10,5 +10,6 @@ An application used to demonstrate stripe payments and subscriptions
 ## Running the application
 
 1. Clone / download this repository into your desired folder
-1. Run `npm install` to install all the dependencies
-1. Use Postman to test the endpoints
+2. Run `npm install` to install all the dependencies
+3. Rename the .env-sample to .env and set up all the environment variables
+4. Use Postman to test the endpoints

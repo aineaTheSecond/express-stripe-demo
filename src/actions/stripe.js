@@ -124,7 +124,7 @@ async function createSubscription(data) {
 }
 
 // unsubscribe
-async function unsubscribe(data) {
+async function unsubscribeUser(data) {
   try {
     const unsubscribed = await stripe.subscriptions.del(data.subscriptionId);
 
@@ -138,5 +138,5 @@ module.exports = {
   createCustomer,
   createCharge,
   createSubscription,
-  unsubscribe,
+  unsubscribeUser,
 };

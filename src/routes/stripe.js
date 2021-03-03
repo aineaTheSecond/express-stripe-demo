@@ -1,9 +1,10 @@
 const express = require("express");
-const { unsubscribe } = require(".");
+
 const {
   createCharge,
   createCustomer,
   createSubscription,
+  unsubscribeUser,
 } = require("../actions/stripe");
 const router = express.Router();
 
@@ -46,7 +47,7 @@ router.post("/subscribe", async (req, res) => {
 // unsubscribe
 router.post("/unsubscribe", async (req, res) => {
   try {
-    const response = unsubscribe(req.body);
+    const response = await unsubscribeUser(req.body);
     res.json(response);
   } catch (error) {
     res.status(400).json(error);
